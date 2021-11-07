@@ -1,4 +1,4 @@
-# Route Map
+# Map Router
 
 > A simple python script to draw routes on a given map.
 
@@ -8,7 +8,7 @@ It should go without saying that, before anything else, you need to clone the re
 
 ```bash
 git clone https://github.com/pmorim/route-map.git
-cd route-map
+cd map-router
 ```
 
 To setup you own map and destinations follow the steps below:
