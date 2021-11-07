@@ -11,7 +11,8 @@ import pandas as pd
 @click.option("-r", "--routes", "routes_csv", required=True, help="The CSV of the routes")
 @click.option("-m", "--map", "map_img", required=True, help="The map image")
 @click.option("-o", "--out", "out_img", required=True, help="The output image")
-def main(dest_csv, routes_csv, map_img, out_img):
+@click.option("--size-ratio", default=100, show_default=True, help="Change this value if you are experiencing issues with the resolution of the output image")
+def main(dest_csv, routes_csv, map_img, out_img, size_ratio):
     """Draw individual routes on a given map."""
 
     # Plotting settings
@@ -27,7 +28,8 @@ def main(dest_csv, routes_csv, map_img, out_img):
 
     # Initialize the plot
     width, height = img.size
-    plt.figure(figsize=(width / 100, height / 100))
+    figsize = (width / size_ratio, height / size_ratio)
+    plt.figure(figsize=figsize)
 
     # Draw the map and destinations
     plot = sns.scatterplot(data=coords, x='x', y='y', color='black')
@@ -64,7 +66,7 @@ def main(dest_csv, routes_csv, map_img, out_img):
     plt.savefig(out_img, pad_inches=0, bbox_inches='tight')
 
     # Signal end of script
-    print('Routes drawn successfully')
+    click.echo('Routes drawn successfully')
 
 
 if __name__ == '__main__':
