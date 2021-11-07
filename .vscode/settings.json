@@ -1,0 +1,17 @@
+{
+  "cSpell.words": [
+    "astype",
+    "fillna",
+    "imread",
+    "imshow",
+    "inplace",
+    "iterrows",
+    "pyplot",
+    "xlabel",
+    "xlim",
+    "xticklabels",
+    "ylabel",
+    "ylim",
+    "yticklabels"
+  ]
+}
