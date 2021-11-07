@@ -12,7 +12,7 @@ import pandas as pd
 @click.option("-m", "--map", "map_img", required=True, help="The map image")
 @click.option("-o", "--out", "out_img", required=True, help="The output image")
 @click.option("--size-ratio", default=100, show_default=True, help="Change this value if you are experiencing issues with the resolution of the output image")
-def main(dest_csv, routes_csv, map_img, out_img, size_ratio):
+def route_map(dest_csv, routes_csv, map_img, out_img, size_ratio):
     """Draw individual routes on a given map."""
 
     # Plotting settings
@@ -70,4 +70,4 @@ def main(dest_csv, routes_csv, map_img, out_img, size_ratio):
 
 
 if __name__ == '__main__':
-    main()
+    route_map()
