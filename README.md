@@ -43,7 +43,7 @@ route-map --help
 
 ## Why?
 
-A friend of mine had an assignment where he needed to calculate the most optimal routes for a transportation company. Therefore, I created this tool to aid him in verifying and displaying the routes results.
+A friend of mine had an assignment where he needed to calculate the most optimal routes for a transportation company. Then, in order to help him, I created this tool to aid him in verifying and displaying the routes results.
 
 ## License
 
