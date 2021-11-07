@@ -8,8 +8,8 @@ sns.set_style('white')
 sns.set_context('talk')
 
 # Read the data from .csv files
-coords = pd.read_csv('./data/localidades.csv', index_col='Localidade')
-routes = pd.read_csv('./data/rotas.csv', header=None)
+coords = pd.read_csv('./in/destinations.csv', index_col='Destination')
+routes = pd.read_csv('./in/routes.csv', header=None)
 routes.fillna('-', inplace=True) # Replace 'NaN' for '-'
 
 # Plot the locations
@@ -17,7 +17,7 @@ plt.figure(figsize=(9.35, 18.12)) # Size of the original map (in inches)
 plot = sns.scatterplot(data=coords, x='x', y='y', color='black')
 
 # Use the map as background
-img = plt.imread("./img/map.png")
+img = plt.imread("./in/map.png")
 plot.imshow(img)
 
 # Iterate through all routes
@@ -43,7 +43,7 @@ plot.set_xlim(0, 935)
 plot.set_ylim(1812, 0)
 
 # Save the plot
-plt.savefig('./img/rotas.png', pad_inches=0, bbox_inches='tight')
+plt.savefig('./out/routes.png', pad_inches=0, bbox_inches='tight')
 
 # Signal end of script
-print('Script executada com sucesso')
+print('Routes drawn successfully')
